@@ -1,0 +1,11 @@
+version: "2"
+services:
+  frontend:
+    build:
+      context: ./frontend/
+    command: npm run start
+    volumes:
+      - ./frontend/:/app
+      - /app/node_modules
+    ports:
+      - "3000:3000"
